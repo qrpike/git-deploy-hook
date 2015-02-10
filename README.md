@@ -8,16 +8,16 @@ This is a HTTP service that listens on a port and then runs a specified script w
 Then install the npm scripts
 
 
-		npm install
+	npm install
 
 
 It's best to use something like Forever to run the script.
 
-		forever start -c coffee server.coffee
+	forever start -c coffee server.coffee
 
 Be default it will run on port `2202`
 
-		curl http://localhost:2202
+	curl http://localhost:2202
 
 #### Using the service:
 
