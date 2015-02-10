@@ -1,0 +1,14 @@
+{
+  "name": "github-post-hook",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "async": "~0.9.0",
+    "lodash": "~2.4.1",
+    "restify": "~2.8.4"
+  },
+  "devDependencies": {},
+  "author": "Quinton Pike",
+  "license": "ISC"
+}
