@@ -14,6 +14,7 @@ EventEmitter = require('events').EventEmitter
 restify = require('restify')
 async = require('async')
 lodash = require('lodash')
+exec = require('child_process').exec
 
 
 # Setup RESTful Server:
@@ -67,7 +68,12 @@ server.on( 'MethodNotAllowed', unknownMethodHandler )
 # -----------------------------------------
 RunScript = ( req, res )=>
 	console.log 'Running:', GDH_SCRIPT
-	res.send(200)
+	exec GDH_SCRIPT, ( err, stdout, stderr )=>
+		ret = 
+			err: err
+			output: stdout
+			stderr: stderr
+		res.send ret
 
 
 # Listen for reqs:
